@@ -1,6 +1,27 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
+import Typed from 'typed.js';
 
 const Data = () => {
+    const el = useRef(null);
+
+    useEffect(() => {
+        const typed = new Typed(el.current, {
+            strings: [
+                'I am a learner',
+                'I am a problem solver',
+                'I am a software engineer',
+                'and sometimes a guitarist'
+            ],
+            typeSpeed: 50,
+            backSpeed: 25,
+            backDelay: 800,
+            loop: true,
+            showCursor: true
+        });
+
+        return () => typed.destroy();
+    }, []);
+
     return (
         <div className='home__data'>
             <h1 className='home__title'>
@@ -44,7 +65,11 @@ const Data = () => {
                         fill='#EBA352'></path>
                 </svg>
             </h1>
-            <h3 className='home__subtitle'>Software Engineer</h3>
+            {/* <h3 className='home__subtitle'>Software Engineer</h3> */}
+            <h3 className='home__subtitle'>
+                &nbsp;
+                <span ref={el} />
+            </h3>
             <p className='home__description'>
                 Undergraduate at Renaissance Engineering Programme, Nanyang
                 Technological University
