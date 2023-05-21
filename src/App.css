@@ -152,7 +152,7 @@ img {
     background-color: var(--title-color);
     color: var(--container-color);
     padding: 1.25rem 2rem;
-    border-radius: 1rem;
+    border-radius: 2rem;
     font-weight: var(--font-medium);
 }
 
@@ -173,8 +173,8 @@ img {
 /* For large devices */
 @media screen and (max-width: 992px) {
     .container {
-        margin-left: var(--mb-1-5);
-        margin-right: var(--mb-1-5);
+        margin-left: var(--mb-2-5);
+        margin-right: var(--mb-2-5);
     }
 
     .button {
