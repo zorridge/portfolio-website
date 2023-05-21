@@ -66,7 +66,7 @@
         left: 0;
         width: 100%;
         background-color: var(--body-color);
-        padding: 2rem 1.5rem 4rem;
+        padding: 2rem 1.5rem 3rem;
         box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
         border-radius: 1.5rem 1.5rem 0 0;
         transition: 300ms;
@@ -79,8 +79,8 @@
 
     .nav__list {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
     }
 
     .nav__icon {
@@ -89,8 +89,8 @@
 
     .nav__close {
         position: absolute;
-        right: 1.3rem;
-        bottom: 0.5rem;
+        right: 2.3rem;
+        bottom: 0.4rem;
         font-size: 1.5rem;
         cursor: pointer;
         color: var(--title-color);

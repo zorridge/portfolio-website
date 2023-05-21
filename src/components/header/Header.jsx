@@ -12,7 +12,7 @@ const Header = () => {
         <header className='header'>
             <nav className='nav container'>
                 <a href='index.html' className='nav__logo'>
-                    Zhou
+                    ZHOU
                 </a>
                 <div
                     className={
