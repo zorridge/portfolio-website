@@ -70,6 +70,7 @@
     width: 350px;
     height: 350px;
     animation: profile__animate 8s ease-in-out infinite 100ms;
+    z-index: 10;
 }
 
 @keyframes profile__animate {
