@@ -34,6 +34,23 @@
     color: var(--title-color);
     font-weight: var(--font-medium);
     transition: 300ms;
+    display: inline-block;
+    position: relative;
+}
+
+.nav__link::before {
+    transition: 300ms;
+    height: 2px;
+    content: '';
+    position: absolute;
+    background-color: var(--title-color-dark);
+    width: 100%;
+    bottom: -8px;
+    opacity: 0;
+}
+
+.nav__item {
+    text-align: center;
 }
 
 .nav__icon,
@@ -46,6 +63,12 @@
 .active-link,
 .nav__link:hover {
     color: var(--title-color-dark);
+}
+
+.active-link::before,
+.nav__link:hover::before {
+    bottom: -4px;
+    opacity: 1;
 }
 
 /*=============== BREAKPOINTS ===============*/
@@ -72,6 +95,11 @@
         transition: 300ms;
     }
 
+    .active-link::before,
+    .nav__link:hover::before {
+        opacity: 0;
+    }
+
     /* Show Menu */
     .show-menu {
         bottom: 0;
@@ -79,7 +107,8 @@
 
     .nav__list {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
         gap: 1rem;
     }
 

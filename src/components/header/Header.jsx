@@ -3,9 +3,14 @@ import './header.css';
 
 const Header = () => {
     const [isMenuShown, setIsMenuShown] = useState(false);
+    const [selectTab, setSelectTab] = useState(1);
 
     const menuToggleHandler = () => {
         setIsMenuShown(prevState => !prevState);
+    };
+
+    const selectTabHandler = tab => {
+        setSelectTab(tab);
     };
 
     return (
@@ -20,37 +25,67 @@ const Header = () => {
                     }>
                     <ul className='nav__list grid'>
                         <li className='nav__item'>
-                            <a href='#home' className='nav__link active-link'>
+                            <a
+                                href='#home'
+                                className={`nav__link ${
+                                    selectTab === 1 ? 'active-link' : ''
+                                }`}
+                                onClick={() => selectTabHandler(1)}>
                                 <i className='uil uil-home nav__icon' />
                                 Home
                             </a>
                         </li>
                         <li className='nav__item'>
-                            <a href='#about' className='nav__link'>
+                            <a
+                                href='#about'
+                                className={`nav__link ${
+                                    selectTab === 2 ? 'active-link' : ''
+                                }`}
+                                onClick={() => selectTabHandler(2)}>
                                 <i className='uil uil-user nav__icon' />
                                 About
                             </a>
                         </li>
                         <li className='nav__item'>
-                            <a href='#skills' className='nav__link'>
-                                <i className='uil uil-file-alt nav__icon' />
+                            <a
+                                href='#skills'
+                                className={`nav__link ${
+                                    selectTab === 3 ? 'active-link' : ''
+                                }`}
+                                onClick={() => selectTabHandler(3)}>
+                                <i className='uil uil-lightbulb-alt nav__icon' />
                                 Skills
                             </a>
                         </li>
                         <li className='nav__item'>
-                            <a href='#experiences' className='nav__link'>
-                                <i className='uil uil-file-alt nav__icon' />
+                            <a
+                                href='#experiences'
+                                className={`nav__link ${
+                                    selectTab === 4 ? 'active-link' : ''
+                                }`}
+                                onClick={() => selectTabHandler(4)}>
+                                <i className='uil uil-briefcase-alt nav__icon' />
                                 Experiences
                             </a>
                         </li>
                         <li className='nav__item'>
-                            <a href='#portfolio' className='nav__link'>
-                                <i className='uil uil-scenery nav__icon' />
-                                Portfolio
+                            <a
+                                href='#projects'
+                                className={`nav__link ${
+                                    selectTab === 5 ? 'active-link' : ''
+                                }`}
+                                onClick={() => selectTabHandler(5)}>
+                                <i className='uil uil-flask nav__icon' />
+                                Projects
                             </a>
                         </li>
                         <li className='nav__item'>
-                            <a href='#contact' className='nav__link'>
+                            <a
+                                href='#contact'
+                                className={`nav__link ${
+                                    selectTab === 6 ? 'active-link' : ''
+                                }`}
+                                onClick={() => selectTabHandler(6)}>
                                 <i className='uil uil-message nav__icon' />
                                 Contact
                             </a>
