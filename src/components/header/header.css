@@ -15,10 +15,15 @@
     column-gap: 1rem;
 }
 
-.nav__logo,
 .nav__toggle {
     color: var(--title-color);
     font-weight: var(--font-medium);
+}
+
+.nav__logo {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    font-size: 1.5rem;
 }
 
 .nav__list {

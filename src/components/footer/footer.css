@@ -51,6 +51,11 @@
 .footer__social-link {
     color: var(--title-color);
     font-weight: var(--font-medium);
+    transition: 300ms;
+}
+
+.footer__social-link:hover {
+    color: var(--title-color-dark);
 }
 
 .footer__copy {
