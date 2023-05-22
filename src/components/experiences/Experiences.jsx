@@ -48,7 +48,7 @@ const Experiences = () => {
                             <div>
                                 <div className='qualification__headline'>
                                     <img
-                                        src={require('../assets/ntu-logo.jpeg')}
+                                        src={require('../../assets/ntu-logo.jpeg')}
                                         alt='ntu-logo'
                                     />
                                     <div>
@@ -82,7 +82,7 @@ const Experiences = () => {
                             <div>
                                 <div className='qualification__headline'>
                                     <img
-                                        src={require('../assets/ri-logo.jpeg')}
+                                        src={require('../../assets/ri-logo.jpeg')}
                                         alt='ri-logo'
                                     />
                                     <div>
@@ -115,7 +115,7 @@ const Experiences = () => {
                             <div>
                                 <div className='qualification__headline'>
                                     <img
-                                        src={require('../assets/proxtera-logo.jpeg')}
+                                        src={require('../../assets/proxtera-logo.jpeg')}
                                         alt='proxtera-logo'
                                     />
                                     <div>
@@ -149,7 +149,7 @@ const Experiences = () => {
                             <div>
                                 <div className='qualification__headline'>
                                     <img
-                                        src={require('../assets/refersfyi.jpeg')}
+                                        src={require('../../assets/refersfyi.jpeg')}
                                         alt='refersfyi-logo'
                                     />
                                     <div>
@@ -174,7 +174,7 @@ const Experiences = () => {
                             <div>
                                 <div className='qualification__headline'>
                                     <img
-                                        src={require('../assets/shopee-logo.jpeg')}
+                                        src={require('../../assets/shopee-logo.jpeg')}
                                         alt='shopee-logo'
                                     />
                                     <div>
