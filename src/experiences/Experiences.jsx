@@ -20,7 +20,7 @@ const Experiences = () => {
                             toggleTab === 1 ? 'qualification__active' : ''
                         }`}
                         onClick={() => toggleTabHandler(1)}>
-                        <i className='uil uil-university qualification__icon' />{' '}
+                        <i className='uil uil-graduation-cap qualification__icon' />
                         Education
                     </div>
 
@@ -30,7 +30,7 @@ const Experiences = () => {
                             toggleTab === 2 ? 'qualification__active' : ''
                         }`}
                         onClick={() => toggleTabHandler(2)}>
-                        <i className='uil uil-constructor qualification__icon' />{' '}
+                        <i className='uil uil-hard-hat qualification__icon' />
                         Work
                     </div>
                 </div>
