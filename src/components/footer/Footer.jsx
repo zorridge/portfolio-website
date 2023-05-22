@@ -57,7 +57,7 @@ const Footer = () => {
                         </a>
                     </div>
                     <span className='footer__copy'>
-                        &#169; 2023 Zhou Ziheng. All rights reserved.
+                        Made with <i class='uil uil-heart' /> by Zhou Ziheng
                     </span>
                 </div>
             </div>

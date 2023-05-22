@@ -55,6 +55,7 @@
 .footer__copy {
     display: block;
     color: var(--text-color);
+    font-size: var(--smaller-font-size);
     text-align: center;
     z-index: 1001;
 }
@@ -108,6 +109,7 @@
         animation-delay: -5s;
         bottom: 20px;
     }
+
     @keyframes wave {
         0% {
             background-position-x: 0px;
@@ -116,6 +118,7 @@
             background-position-x: 1000px;
         }
     }
+
     @keyframes wave2 {
         0% {
             background-position-x: 0px;
