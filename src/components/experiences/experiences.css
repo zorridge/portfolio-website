@@ -32,6 +32,10 @@
     opacity: 0;
 }
 
+.qualification__button:hover {
+    transform: translateY(-3px);
+}
+
 .qualification__active,
 .qualification__button:hover {
     color: var(--title-color-dark);
@@ -76,6 +80,7 @@
 .qualification__data img {
     width: 50px;
     height: 50px;
+    box-shadow: 0px 0px 2px rgb(0 0 0 / 25%), 0 3px 12px rgb(0 0 0 / 10%);
 }
 
 .qualification__data:nth-child(odd) img {

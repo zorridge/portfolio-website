@@ -21,6 +21,7 @@
 
 .footer__link {
     font-weight: var(--font-medium);
+    transition: 300ms;
 }
 
 .footer__link:hover {

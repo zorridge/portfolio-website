@@ -18,10 +18,12 @@
 .home__social-icon {
     font-size: 1.25rem;
     color: var(--title-color);
+    transition: 300ms;
 }
 
 .home__social-icon:hover {
     color: var(--title-color-dark);
+    transform: translateY(-3px);
 }
 
 .home__title {
@@ -89,6 +91,11 @@
 
 .home__scroll {
     margin-left: 9.25rem;
+    transition: 300ms;
+}
+
+.home__scroll:hover {
+    transform: translateY(-3px);
 }
 
 .wheel {

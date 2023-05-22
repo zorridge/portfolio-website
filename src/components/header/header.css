@@ -64,6 +64,10 @@
     color: var(--title-color-dark);
 }
 
+.nav__link:hover {
+    transform: translateY(-3px);
+}
+
 .active-link::before,
 .nav__link:hover::before {
     bottom: -4px;
