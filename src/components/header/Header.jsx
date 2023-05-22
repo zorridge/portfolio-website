@@ -11,6 +11,7 @@ const Header = () => {
 
     const selectTabHandler = tab => {
         setSelectTab(tab);
+        if (isMenuShown) setIsMenuShown(false);
     };
 
     return (
