@@ -115,8 +115,10 @@
     display: inline-block;
     width: 13px;
     height: 13px;
-    background-color: var(--text-color);
+    background-color: var(--title-color);
     border-radius: 50%;
+    z-index: var(--z-tooltip);
+    position: relative;
 }
 
 .qualification__line {

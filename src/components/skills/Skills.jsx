@@ -10,7 +10,7 @@ const Skills = () => {
         <section className='skills section' id='skills'>
             <h2 className='section__title'>Skills</h2>
             <span className='section__subtitle'>
-                The tools I have worked with
+                Here's what I have worked with
             </span>
             <div className='skills__container container grid'>
                 <Languages />

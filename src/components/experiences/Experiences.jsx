@@ -11,7 +11,9 @@ const Experiences = () => {
     return (
         <section className='qualification section' id='experiences'>
             <h2 className='section__title'>Experiences</h2>
-            <span className='section__subtitle'>The places I have been to</span>
+            <span className='section__subtitle'>
+                Here's where I have been to
+            </span>
             <div className='qualification__container container'>
                 <div className='qualification__tabs'>
                     {/* Education Button */}
