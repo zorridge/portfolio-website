@@ -134,6 +134,11 @@
     margin-top: auto;
 }
 
+.contact__form-button-icon {
+    margin-left: 0.5rem;
+    font-size: 1.25rem;
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (max-width: 992px) {
