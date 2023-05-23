@@ -56,6 +56,10 @@
     top: 1rem;
 }
 
+.home__subtitle-highlight {
+    color: var(--title-color-dark);
+}
+
 .home__description {
     max-width: 400px;
     margin-bottom: var(--mb-3);

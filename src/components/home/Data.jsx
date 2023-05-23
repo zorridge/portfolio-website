@@ -7,10 +7,10 @@ const Data = () => {
     useEffect(() => {
         const typed = new Typed(el.current, {
             strings: [
-                'I am a learner',
-                'I am a problem solver',
-                'I am a software engineer',
-                'and sometimes a guitarist'
+                'I am a <span class="home__subtitle-highlight">learner</span>',
+                'I am a <span class="home__subtitle-highlight">problem solver</span>',
+                'I am a <span class="home__subtitle-highlight">software engineer</span>',
+                'and sometimes a <span class="home__subtitle-highlight">guitarist</span>'
             ],
             typeSpeed: 50,
             backSpeed: 25,
