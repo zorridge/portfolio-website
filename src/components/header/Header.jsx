@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './header.css';
 
 const Header = () => {
@@ -13,6 +13,30 @@ const Header = () => {
         setSelectTab(tab);
         if (isMenuShown) setIsMenuShown(false);
     };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = document.querySelectorAll('section');
+            const scrollPosition = window.scrollY + 50; // Offset value
+
+            // Find the current section based on the scroll position
+            for (let i = sections.length - 1; i >= 0; i--) {
+                const section = sections[i];
+                const sectionTop = section.offsetTop;
+
+                if (scrollPosition >= sectionTop) {
+                    setSelectTab(i + 1);
+                    break;
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <header className='header'>
