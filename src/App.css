@@ -6,14 +6,14 @@
     --header-height: 3rem;
 
     /*========== Colours ==========*/
-    --hue: 0;
-    --sat: 0%;
-    --title-color: #333;
-    --title-color-dark: #698474;
-    --text-color: hsl(var(--hue), var(--sat), 46%);
-    /* --body-color: hsl(var(--hue), var(--sat), 98%); */
-    --body-color: #fafafa;
+    /* Material design 'on' colours */
+    /* Emerald: #009875 */
+    --title-color: rgba(0, 0, 0, 87%);
+    --title-color-dark: #007b5a;
+    --text-color: rgba(0, 0, 0, 60%);
+    --body-color: #fff;
     --container-color: #fff;
+    --button-color-active: rgba(255, 255, 255, 87%);
 
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
@@ -48,6 +48,18 @@
     --z-tooltip: 1001;
     --z-fixed: 1002;
     --z-modal: 1000;
+}
+
+/* Dark mode */
+.dark-mode {
+    /*========== Colours ==========*/
+    /* Material design 'on' colours */
+    --title-color: rgba(255, 255, 255, 87%);
+    --title-color-dark: #009875;
+    --text-color: rgba(255, 255, 255, 60%);
+    --body-color: #121212;
+    --container-color: #212121;
+    --button-color-active: rgba(0, 0, 0, 87%);
 }
 
 /* Responsive typography */
@@ -159,6 +171,7 @@ img {
 }
 
 .button:hover {
+    color: var(--button-color-active);
     background-color: var(--title-color-dark);
     transform: translateY(-3px);
     box-shadow: 0px 0px 2px rgb(0 0 0 / 25%), 0 3px 12px rgb(0 0 0 / 10%);

@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
+
 import './header.css';
 
 const Header = () => {
     const [isMenuShown, setIsMenuShown] = useState(false);
     const [selectTab, setSelectTab] = useState(1);
+    const [isDarkMode, setDarkMode] = useState(false);
+    const root = document.documentElement;
 
     const menuToggleHandler = () => {
         setIsMenuShown(prevState => !prevState);
@@ -14,10 +18,24 @@ const Header = () => {
         if (isMenuShown) setIsMenuShown(false);
     };
 
+    const toggleDarkMode = checked => {
+        setDarkMode(checked);
+    };
+
+    // Toggle dark mode
+    useEffect(() => {
+        if (isDarkMode) {
+            root.classList.add('dark-mode');
+        } else {
+            root.classList.remove('dark-mode');
+        }
+    }, [root, isDarkMode]);
+
+    // Match navlink with scroll
     useEffect(() => {
         const handleScroll = () => {
             const sections = document.querySelectorAll('section');
-            const scrollPosition = window.scrollY + 50; // Offset value
+            const scrollPosition = window.scrollY + 100; // Offset value
 
             // Find the current section based on the scroll position
             for (let i = sections.length - 1; i >= 0; i--) {
@@ -117,12 +135,18 @@ const Header = () => {
                         </li>
                     </ul>
 
-                    <i
+                    {/* <i
                         className='uil uil-times nav__close'
                         onClick={menuToggleHandler}
-                    />
+                    /> */}
                 </div>
-
+                <DarkModeSwitch
+                    checked={isDarkMode}
+                    onChange={toggleDarkMode}
+                    size={24}
+                    sunColor={'#000000de'}
+                    moonColor={'#ffffffde'}
+                />
                 <div className='nav__toggle' onClick={menuToggleHandler}>
                     <i className='uil uil-apps' />
                 </div>
