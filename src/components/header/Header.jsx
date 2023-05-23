@@ -3,7 +3,7 @@ import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
 import './header.css';
 
-const Header = () => {
+const Header = ({ toggleColorModeHandler: parentToggleDarkMode }) => {
     const [isMenuShown, setIsMenuShown] = useState(false);
     const [selectTab, setSelectTab] = useState(1);
     const [isDarkMode, setDarkMode] = useState(false);
@@ -20,6 +20,7 @@ const Header = () => {
 
     const toggleDarkMode = checked => {
         setDarkMode(checked);
+        parentToggleDarkMode(checked);
     };
 
     // Toggle dark mode
