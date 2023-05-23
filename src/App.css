@@ -185,6 +185,7 @@ img {
     background-color: var(--container-color);
     color: var(--text-color);
     cursor: default;
+    border: solid 1px var(--input-border-color);
 }
 
 .button__icon {
