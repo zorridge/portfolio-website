@@ -48,7 +48,7 @@ const Contact = () => {
             </span>
             <div className='contact__container container grid'>
                 <div className='contact__content'>
-                    <h3 className='contact__title'>Get in touch</h3>
+                    <h3 className='contact__title'>Connect with me</h3>
                     <div className='contact__info'>
                         <div className='contact__card'>
                             <i class='uil uil-envelope-alt contact__card-icon' />
@@ -99,7 +99,7 @@ const Contact = () => {
                 </div>
 
                 <div className='contact__content'>
-                    <h3 className='contact__title'>Ask me anything</h3>
+                    <h3 className='contact__title'>Leave a message</h3>
 
                     <form
                         ref={form}

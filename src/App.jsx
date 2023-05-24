@@ -26,7 +26,7 @@ function App() {
             <Header toggleColorModeHandler={toggleColorModeHandler} />
             <main className='main'>
                 <Home />
-                {/* <About /> */}
+                <About />
                 <Skills />
                 <Experiences />
                 <Projects />

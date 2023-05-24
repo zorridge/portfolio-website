@@ -93,6 +93,11 @@
     }
 }
 
+.home__button-icon {
+    font-size: 1.25rem;
+    margin-left: var(--mb-0-5);
+}
+
 .home__scroll {
     margin-left: 9.25rem;
     transition: 300ms;
