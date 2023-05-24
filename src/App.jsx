@@ -7,6 +7,7 @@ import Home from './components/home/Home';
 import About from './components/about/About';
 import Skills from './components/skills/Skills';
 import Experiences from './components/experiences/Experiences';
+import Projects from './components/projects/Projects';
 import Contact from './components/contact/Contact';
 import Music from './components/music/Music';
 import Footer from './components/footer/Footer';
@@ -28,6 +29,7 @@ function App() {
                 {/* <About /> */}
                 <Skills />
                 <Experiences />
+                <Projects />
                 <Contact />
                 <Music isDarkMode={isDarkMode} />
             </main>
