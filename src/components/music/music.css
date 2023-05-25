@@ -1,6 +1,9 @@
 .music__container {
     display: flex;
     justify-content: center;
+    /* background-color: #009875;
+    height: 150px;
+    width: 80; */
 }
 
 .music__container img {

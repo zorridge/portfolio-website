@@ -85,7 +85,7 @@
 .projects__button-container {
     display: flex;
     column-gap: var(--mb-0-75);
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .projects__button {

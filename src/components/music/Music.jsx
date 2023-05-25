@@ -3,7 +3,7 @@ import './music.css';
 
 const Music = ({ isDarkMode }) => {
     return (
-        <div className='section music' id='music'>
+        <section className='section music' id='#music'>
             <h2 className='section__title'>Just For Fun</h2>
             <span className='section__subtitle'>
                 ...and here's what I have been listening to
@@ -18,7 +18,7 @@ const Music = ({ isDarkMode }) => {
                     alt='spotify-widget'
                 />
             </div>
-        </div>
+        </section>
     );
 };
 

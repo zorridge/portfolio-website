@@ -61,7 +61,7 @@ const Header = ({ toggleColorModeHandler: parentToggleDarkMode }) => {
         <header className='header'>
             <nav className='nav container'>
                 <a href='index.html' className='nav__logo'>
-                    Z.
+                    Z&#178;
                 </a>
                 <div
                     className={
