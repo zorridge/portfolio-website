@@ -703,7 +703,7 @@
 .stars-1:after {
     content: '';
     position: absolute;
-    top: 100%;
+    top: 3500px;
     width: 1px;
     height: 1px;
     background: transparent;
@@ -1630,7 +1630,7 @@
 .stars-2:after {
     content: '';
     position: absolute;
-    top: 100%;
+    top: 3500px;
     width: 2px;
     height: 2px;
     background: transparent;
@@ -1990,7 +1990,7 @@
 .stars-3:after {
     content: '';
     position: absolute;
-    top: 100%;
+    top: 3500px;
     width: 3px;
     height: 3px;
     background: transparent;
