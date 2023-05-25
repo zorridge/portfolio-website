@@ -1,6 +1,8 @@
 import React from 'react';
 import './about.css';
+
 import Info from './Info';
+import Resume from '../../assets/resume_ZhouZiheng.pdf';
 
 const About = () => {
     return (
@@ -19,8 +21,10 @@ const About = () => {
                     </p>
 
                     <a
-                        href='https://www.google.com'
-                        className='button button--flex'>
+                        href={Resume}
+                        className='button button--flex'
+                        target='_blank'
+                        rel='noreferrer'>
                         Download Resume
                         <i className='uil uil-file-download about__button-icon' />
                     </a>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Resume from '../../assets/resume_ZhouZiheng.pdf';
 
 const Social = () => {
     return (
@@ -18,7 +19,7 @@ const Social = () => {
                 <i className='uil uil-github-alt' />
             </a>
             <a
-                href='https://www.google.com'
+                href={Resume}
                 className='home__social-icon'
                 target='_blank'
                 rel='noreferrer'>
