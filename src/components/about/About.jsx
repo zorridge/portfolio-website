@@ -43,8 +43,10 @@ const About = () => {
                                 {' '}
                                 Flutter mobile development
                             </span>
-                            . I thrive under pressure and I am always seeking
-                            out new opportunities to challenge myself.
+                            . I am constantly seeking out new opportunities to
+                            challenge myself, as I firmly believe it is only
+                            under pressure that we can unlock our fullest
+                            potential.
                         </p>
                         {/* <br />
                         <p>Discover more about me below!</p> */}
