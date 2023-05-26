@@ -148,6 +148,14 @@ img {
     text-align: center;
 }
 
+.semibold {
+    font-weight: var(--font-semi-bold);
+}
+
+.medium {
+    font-weight: var(--font-medium);
+}
+
 /*=============== LAYOUT ===============*/
 .container {
     max-width: 968px;

@@ -10,25 +10,44 @@ const About = () => {
             <h2 className='section__title'>About Me</h2>
             <span className='section__subtitle'>Here's who I am</span>
             <div className='about__container container'>
-                {/* <img src={AboutImg} alt='about' className='about__img' /> */}
                 <div className='about__data'>
                     <Info />
                     <p className='about__description'>
                         <p>
                             I am an undergraduate student in Nanyang
-                            Technological University's Renaissance Engineering
-                            Programme (REP), pursuing a Bachelor of Engineering
-                            Science (Computer Science) concurrently with a M.Sc.
-                            in Technology Management.
+                            Technological University's{' '}
+                            <span className='about__highlight'>
+                                Renaissance Engineering Programme (REP)
+                            </span>
+                            , pursuing a{' '}
+                            <span className='about__highlight'>
+                                {' '}
+                                Bachelor of Engineering Science (Computer
+                                Science)
+                            </span>{' '}
+                            concurrently with a{' '}
+                            <span className='about__highlight'>
+                                M.Sc. in Technology Management
+                            </span>
+                            .
                         </p>
                         <br />
                         <p>
                             I am a highly motivated individual with a strong
-                            background in full stack web development and Flutter
-                            mobile development. I thrive under pressure and I am
-                            always seeking out new opportunities to challenge
-                            myself. Discover more about me below!
+                            background in{' '}
+                            <span className='about__highlight'>
+                                full stack web development{' '}
+                            </span>
+                            and{' '}
+                            <span className='about__highlight'>
+                                {' '}
+                                Flutter mobile development
+                            </span>
+                            . I thrive under pressure and I am always seeking
+                            out new opportunities to challenge myself.
                         </p>
+                        {/* <br />
+                        <p>Discover more about me below!</p> */}
                     </p>
 
                     <a
