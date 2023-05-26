@@ -23,11 +23,12 @@ const About = () => {
                         </p>
                         <br />
                         <p>
-                            I am a highly motivated individual with experiences
-                            in full stack web development and Flutter mobile
-                            development. I thrive under pressure and I am always
-                            looking for the next exciting opportunity to
-                            challenge myself. Find out more about me below!
+                            I am a highly motivated individual with a strong
+                            background in full stack web development and Flutter
+                            mobile development. I thrive when faced with
+                            challenges and consistently seek out new
+                            opportunities to push my boundaries. Discover more
+                            about me below!
                         </p>
                     </p>
 
