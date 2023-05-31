@@ -28,24 +28,6 @@
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (max-width: 992px) {
-    .container {
-        margin-left: var(--mb-2-5);
-        margin-right: var(--mb-2-5);
-    }
-
-    .button {
-        padding: 1rem 1.75rem;
-    }
-
-    .button__icon {
-        width: 22px;
-        height: 22px;
-    }
-}
-
-/*=============== BREAKPOINTS ===============*/
-/* For large devices */
-@media screen and (max-width: 992px) {
     .scrollup {
         display: none;
     }
