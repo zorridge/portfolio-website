@@ -18,7 +18,7 @@ const Projects = () => {
             <span className='section__subtitle'>Here's what I have built</span>
             <div className='projects__container container'>
                 <button className='projects__swiper-prev'>
-                    <i class='uil uil-angle-left-b projects__swiper-icon'></i>
+                    <i className='uil uil-angle-left-b projects__swiper-icon'></i>
                 </button>
                 <Swiper
                     className='projects__swiper'
@@ -53,7 +53,7 @@ const Projects = () => {
                     })}
                 </Swiper>
                 <button className='projects__swiper-next'>
-                    <i class='uil uil-angle-right-b projects__swiper-icon'></i>
+                    <i className='uil uil-angle-right-b projects__swiper-icon'></i>
                 </button>
             </div>
         </section>

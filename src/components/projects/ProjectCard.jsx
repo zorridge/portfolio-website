@@ -1,16 +1,13 @@
 import React from 'react';
 
 const ProjectCard = props => {
-    const { tags, image, title, description, live, source } = props.data;
+    const { id, tags, image, title, description, live, source } = props.data;
 
     const tagsPill = tags.map(tag => {
         return (
-            <>
-                <span key={tag} className='projects__tag'>
-                    {tag}
-                </span>
-                &nbsp;
-            </>
+            <span key={`${id}_${tag}`} className='projects__tag'>
+                {tag}
+            </span>
         );
     });
 
@@ -26,7 +23,7 @@ const ProjectCard = props => {
                     className='button button--flex projects__button'
                     target='_blank'
                     rel='noreferrer'>
-                    <i class='uil uil-external-link-alt projects__icon' />
+                    <i className='uil uil-external-link-alt projects__icon' />
                     <span className='projects__button-text'>Live</span>
                 </a>
                 <a
@@ -34,7 +31,7 @@ const ProjectCard = props => {
                     className='button button--flex projects__button'
                     target='_blank'
                     rel='noreferrer'>
-                    <i class='uil uil-brackets-curly projects__icon' />
+                    <i className='uil uil-brackets-curly projects__icon' />
                     <span className='projects__button-text'>Repo</span>
                 </a>
             </div>

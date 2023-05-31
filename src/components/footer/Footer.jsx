@@ -4,10 +4,10 @@ import './footer.css';
 const Footer = () => {
     return (
         <footer className='footer'>
-            <div class='air air1'></div>
-            <div class='air air2'></div>
-            <div class='air air3'></div>
-            <div class='air air4'></div>
+            <div className='air air1'></div>
+            <div className='air air2'></div>
+            <div className='air air3'></div>
+            <div className='air air4'></div>
             <div className='footer__container container'>
                 {/* <h1 className='footer__title'>ZHOU ZIHENG</h1> */}
                 <ul className='footer__list'>
@@ -57,7 +57,7 @@ const Footer = () => {
                         </a>
                     </div>
                     <span className='footer__copy'>
-                        Made with <i class='uil uil-heart' /> by Zhou Ziheng
+                        Made with <i className='uil uil-heart' /> by Zhou Ziheng
                     </span>
                 </div>
             </div>

@@ -12,54 +12,39 @@ const About = () => {
             <div className='about__container container'>
                 <div className='about__data'>
                     <Info />
-                    <p className='about__description'>
-                        <p>
-                            I am an undergraduate student in Nanyang
-                            Technological University's{' '}
-                            <span className='about__highlight'>
-                                Renaissance Engineering Programme (REP)
-                            </span>
-                            , pursuing a{' '}
-                            <span className='about__highlight'>
-                                {' '}
-                                Bachelor of Engineering Science (Computer
-                                Science)
-                            </span>{' '}
-                            concurrently with a{' '}
-                            <span className='about__highlight'>
-                                M.Sc. in Technology Management
-                            </span>
-                            .
-                        </p>
-                        <br />
-                        <p>
-                            I am a highly motivated individual with a strong
-                            background in{' '}
-                            <span className='about__highlight'>
-                                full stack web development{' '}
-                            </span>
-                            and{' '}
-                            <span className='about__highlight'>
-                                {' '}
-                                Flutter mobile development
-                            </span>
-                            . I am constantly seeking out new opportunities to
-                            challenge myself, as I firmly believe it is only
-                            under pressure that we can unlock our fullest
-                            potential.
-                        </p>
-                        {/* <br />
-                        <p>Discover more about me below!</p> */}
-                    </p>
+                    <div className='about__content grid'>
+                        <blockquote className='about__quote'>
+                            <p>
+                                I’m an early bird and I’m a night owl so I’m
+                                wise and I have worms.
+                            </p>
+                        </blockquote>
+                        <div className='about__details'>
+                            <div className='about__description'>
+                                <p>
+                                    I am a highly motivated individual with
+                                    strong backgrounds in full stack web
+                                    development and Flutter mobile development
+                                </p>
+                                <br />
+                                <p>
+                                    I am constantly seeking out new
+                                    opportunities to challenge myself, as I
+                                    believe it is only under pressure that we
+                                    can unlock our fullest potential.
+                                </p>
+                            </div>
 
-                    <a
-                        href={Resume}
-                        className='button button--flex'
-                        target='_blank'
-                        rel='noreferrer'>
-                        Download Resume
-                        <i className='uil uil-file-download about__button-icon' />
-                    </a>
+                            <a
+                                href={Resume}
+                                className='button button--flex'
+                                target='_blank'
+                                rel='noreferrer'>
+                                Download Resume
+                                <i className='uil uil-file-download about__button-icon' />
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

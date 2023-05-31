@@ -6,7 +6,7 @@ import './header.css';
 const Header = ({ toggleColorModeHandler: parentToggleDarkMode }) => {
     const [isMenuShown, setIsMenuShown] = useState(false);
     const [selectTab, setSelectTab] = useState(1);
-    const [isDarkMode, setDarkMode] = useState(false);
+    const [isDarkMode, setDarkMode] = useState(null);
     const root = document.documentElement;
 
     const menuToggleHandler = () => {
@@ -23,12 +23,25 @@ const Header = ({ toggleColorModeHandler: parentToggleDarkMode }) => {
         parentToggleDarkMode(checked);
     };
 
+    // Restore dark mode preference from local storage on initial render
+    useEffect(() => {
+        const storedDarkMode = localStorage.getItem('darkMode');
+        if (storedDarkMode !== null) {
+            setDarkMode(JSON.parse(storedDarkMode));
+        }
+    }, []);
+
     // Toggle dark mode
     useEffect(() => {
         if (isDarkMode) {
             root.classList.add('dark-mode');
         } else {
             root.classList.remove('dark-mode');
+        }
+
+        // Save dark mode preference to local storage
+        if (isDarkMode !== null) {
+            localStorage.setItem('darkMode', JSON.stringify(isDarkMode));
         }
     }, [root, isDarkMode]);
 

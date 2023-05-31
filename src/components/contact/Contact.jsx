@@ -51,7 +51,7 @@ const Contact = () => {
                     <h3 className='contact__title'>Connect with me</h3>
                     <div className='contact__info'>
                         <div className='contact__card'>
-                            <i class='uil uil-envelope-alt contact__card-icon' />
+                            <i className='uil uil-envelope-alt contact__card-icon' />
                             <h3 className='contact__card-title'>Email</h3>
                             <span className='contact__card-data'>
                                 zhou.ziheng@outlook.com
@@ -60,12 +60,12 @@ const Contact = () => {
                             <a
                                 href='mailto:zhou.ziheng@outlook.com'
                                 className='contact__button'>
-                                <i class='uil uil-angle-right contact__button-icon' />
+                                <i className='uil uil-angle-right contact__button-icon' />
                             </a>
                         </div>
 
                         <div className='contact__card'>
-                            <i class='uil uil-phone-alt contact__card-icon' />
+                            <i className='uil uil-phone-alt contact__card-icon' />
                             <h3 className='contact__card-title'>Phone</h3>
                             <span className='contact__card-data'>
                                 +65 8518 3999
@@ -76,12 +76,12 @@ const Contact = () => {
                                 target='_blank'
                                 rel='noreferrer'
                                 className='contact__button'>
-                                <i class='uil uil-angle-right contact__button-icon' />
+                                <i className='uil uil-angle-right contact__button-icon' />
                             </a>
                         </div>
 
                         <div className='contact__card'>
-                            <i class='uil uil-location-point contact__card-icon' />
+                            <i className='uil uil-location-point contact__card-icon' />
                             <h3 className='contact__card-title'>Address</h3>
                             <span className='contact__card-data'>
                                 {'62 Nanyang Cres, S(636958)'}
@@ -92,7 +92,7 @@ const Contact = () => {
                                 target='_blank'
                                 rel='noreferrer'
                                 className='contact__button'>
-                                <i class='uil uil-angle-right contact__button-icon' />
+                                <i className='uil uil-angle-right contact__button-icon' />
                             </a>
                         </div>
                     </div>
@@ -161,9 +161,9 @@ const Contact = () => {
                             disabled={isEmailSent}>
                             {isEmailSent ? 'Message Sent' : 'Send Message'}
                             {isEmailSent ? (
-                                <i class='uil uil-check-circle contact__form-button-icon'></i>
+                                <i className='uil uil-check-circle contact__form-button-icon'></i>
                             ) : (
-                                <i class='uil uil-message contact__form-button-icon'></i>
+                                <i className='uil uil-message contact__form-button-icon'></i>
                             )}
                         </button>
                     </form>

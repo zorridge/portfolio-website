@@ -80,6 +80,7 @@
     font-weight: var(--font-medium);
     font-size: var(--smaller-font-size);
     border-radius: 2rem;
+    margin-right: var(--mb-0-25);
 }
 
 .projects__button-container {
