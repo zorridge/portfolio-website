@@ -22,15 +22,16 @@
     font-size: var(--h1-font-size);
     font-weight: var(--font-semi-bold);
     position: relative;
+    padding: 0 3rem;
 }
 
-.about__quote::before {
+.about__quote p::before {
     content: '\201C';
     color: var(--title-color-dark);
     font-size: 10rem;
     line-height: 0.5;
     position: absolute;
-    left: -1rem;
+    left: 3rem;
     z-index: -1;
     opacity: 0.5;
 }
@@ -68,7 +69,7 @@
 
 .about__details {
     text-align: left;
-    padding: 0 5rem;
+    padding: 0 3rem;
 }
 
 .about__description {
@@ -92,8 +93,12 @@
         grid-template-columns: 1fr;
     }
 
-    .about__quote::before {
+    .about__quote p::before {
         font-size: 8rem;
+    }
+
+    .about__details {
+        text-align: center;
     }
 }
 
@@ -118,9 +123,16 @@
         justify-self: center;
     }
 
+    .about__quote {
+        padding: 0;
+    }
+
+    .about__quote p::before {
+        left: -1rem;
+    }
+
     .about__details {
         padding: 0;
-        text-align: center;
     }
 
     .about__title {
