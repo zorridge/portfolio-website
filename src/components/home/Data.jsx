@@ -35,7 +35,7 @@ const Data = () => {
             </p>
             <a href='#contact' className='button button--flex'>
                 Get In Touch
-                <i class='uil uil-comment home__button-icon' />
+                <i className='uil uil-comment home__button-icon' />
             </a>
         </div>
     );
