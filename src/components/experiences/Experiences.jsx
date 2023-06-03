@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
 import './experiences.css';
+
+import Work from './Work';
+import Education from './Education';
 
 const Experiences = () => {
     const [toggleTab, setToggleTab] = useState(2);
@@ -36,171 +41,17 @@ const Experiences = () => {
                         Work
                     </div>
                 </div>
-
-                <div className='qualification__sections'>
-                    {/* Education */}
-                    <div
-                        className={`qualification__content ${
-                            toggleTab === 1
-                                ? 'qualification__content-active'
-                                : ''
-                        }`}>
-                        {/* NTU */}
-                        <div className='qualification__data'>
-                            <div>
-                                <div className='qualification__headline'>
-                                    <img
-                                        src={require('../../assets/ntu-logo.jpeg')}
-                                        alt='ntu-logo'
-                                    />
-                                    <div>
-                                        <h3 className='qualification__title'>
-                                            Nanyang Technological University
-                                        </h3>
-                                        <span className='qualification__subtitle'>
-                                            B.E.Sc. in Comp Sci, M.Sc. in Tech
-                                            Mgt
-                                        </span>
-                                    </div>
-                                </div>
-                                <div className='qualification__calendar'>
-                                    <i className='uil uil-calendar-alt' /> Aug
-                                    2022 - Present
-                                </div>
-                            </div>
-                            <div>
-                                <span className='qualification__rounder'></span>
-                                <span className='qualification__line'></span>
-                            </div>
-                        </div>
-
-                        {/* RI */}
-                        <div className='qualification__data'>
-                            <div></div>
-                            <div>
-                                <span className='qualification__rounder'></span>
-                                <span className='qualification__line'></span>
-                            </div>
-                            <div>
-                                <div className='qualification__headline'>
-                                    <img
-                                        src={require('../../assets/ri-logo.jpeg')}
-                                        alt='ri-logo'
-                                    />
-                                    <div>
-                                        <h3 className='qualification__title'>
-                                            Raffles Institution
-                                        </h3>
-                                        <span className='qualification__subtitle'>
-                                            Singapore-Cambridge GCE A-Level
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div className='qualification__calendar'>
-                                    <i className='uil uil-calendar-alt' /> Jan
-                                    2014 - Dec 2019
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Work */}
-                    <div
-                        className={`qualification__content ${
-                            toggleTab === 2
-                                ? 'qualification__content-active'
-                                : ''
-                        }`}>
-                        {/* Proxtera */}
-                        <div className='qualification__data'>
-                            <div>
-                                <div className='qualification__headline'>
-                                    <img
-                                        src={require('../../assets/proxtera-logo.jpeg')}
-                                        alt='proxtera-logo'
-                                    />
-                                    <div>
-                                        <h3 className='qualification__title'>
-                                            Proxtera
-                                        </h3>
-                                        <span className='qualification__subtitle'>
-                                            Software Engineer Intern
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div className='qualification__calendar'>
-                                    <i className='uil uil-calendar-alt' /> May
-                                    2023 - Aug 2023
-                                </div>
-                            </div>
-                            <div>
-                                <span className='qualification__rounder'></span>
-                                <span className='qualification__line'></span>
-                            </div>
-                        </div>
-
-                        {/* Refers.fyi */}
-                        <div className='qualification__data'>
-                            <div></div>
-                            <div>
-                                <span className='qualification__rounder'></span>
-                                <span className='qualification__line'></span>
-                            </div>
-                            <div>
-                                <div className='qualification__headline'>
-                                    <img
-                                        src={require('../../assets/refersfyi.jpeg')}
-                                        alt='refersfyi-logo'
-                                    />
-                                    <div>
-                                        <h3 className='qualification__title'>
-                                            Refers.fyi
-                                        </h3>
-                                        <span className='qualification__subtitle'>
-                                            Software Engineer Intern
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div className='qualification__calendar'>
-                                    <i className='uil uil-calendar-alt' /> Feb
-                                    2023 - Apr 2023
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Shopee */}
-                        <div className='qualification__data'>
-                            <div>
-                                <div className='qualification__headline'>
-                                    <img
-                                        src={require('../../assets/shopee-logo.jpeg')}
-                                        alt='shopee-logo'
-                                    />
-                                    <div>
-                                        <h3 className='qualification__title'>
-                                            Shopee
-                                        </h3>
-                                        <span className='qualification__subtitle'>
-                                            Project Intern
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div className='qualification__calendar'>
-                                    <i className='uil uil-calendar-alt' /> Feb
-                                    2022 - May 2022
-                                </div>
-                            </div>
-                            <div>
-                                <span className='qualification__rounder'></span>
-                                <span className='qualification__line'></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <AnimatePresence mode='wait'>
+                    <motion.div
+                        key={toggleTab}
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        exit={{ y: -20, opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className='qualification__sections'>
+                        {toggleTab === 2 ? <Work /> : <Education />}
+                    </motion.div>
+                </AnimatePresence>
             </div>
         </section>
     );

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import { motion } from 'framer-motion';
 
 import './header.css';
 
@@ -70,6 +71,27 @@ const Header = ({ toggleColorModeHandler: parentToggleDarkMode }) => {
         };
     }, []);
 
+    // Animations
+    const listVariant = {
+        hidden: { opacity: 0, y: -75 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                delayChildren: 0.3,
+                staggerChildren: 0.1
+            }
+        }
+    };
+
+    const itemVariant = {
+        hidden: { opacity: 0, y: -75 },
+        visible: {
+            opacity: 1,
+            y: 0
+        }
+    };
+
     return (
         <header className='header'>
             <nav className='nav container'>
@@ -80,8 +102,12 @@ const Header = ({ toggleColorModeHandler: parentToggleDarkMode }) => {
                     className={
                         isMenuShown ? 'nav__menu show-menu' : 'nav__menu'
                     }>
-                    <ul className='nav__list grid'>
-                        <li className='nav__item'>
+                    <motion.ul
+                        initial='hidden'
+                        animate='visible'
+                        variants={listVariant}
+                        className='nav__list grid'>
+                        <motion.li variants={itemVariant} className='nav__item'>
                             <a
                                 href='#home'
                                 className={`nav__link ${
@@ -91,8 +117,8 @@ const Header = ({ toggleColorModeHandler: parentToggleDarkMode }) => {
                                 <i className='uil uil-home nav__icon' />
                                 Home
                             </a>
-                        </li>
-                        <li className='nav__item'>
+                        </motion.li>
+                        <motion.li variants={itemVariant} className='nav__item'>
                             <a
                                 href='#about'
                                 className={`nav__link ${
@@ -102,8 +128,8 @@ const Header = ({ toggleColorModeHandler: parentToggleDarkMode }) => {
                                 <i className='uil uil-user nav__icon' />
                                 About
                             </a>
-                        </li>
-                        <li className='nav__item'>
+                        </motion.li>
+                        <motion.li variants={itemVariant} className='nav__item'>
                             <a
                                 href='#skills'
                                 className={`nav__link ${
@@ -113,8 +139,8 @@ const Header = ({ toggleColorModeHandler: parentToggleDarkMode }) => {
                                 <i className='uil uil-lightbulb-alt nav__icon' />
                                 Skills
                             </a>
-                        </li>
-                        <li className='nav__item'>
+                        </motion.li>
+                        <motion.li variants={itemVariant} className='nav__item'>
                             <a
                                 href='#experiences'
                                 className={`nav__link ${
@@ -124,8 +150,8 @@ const Header = ({ toggleColorModeHandler: parentToggleDarkMode }) => {
                                 <i className='uil uil-briefcase-alt nav__icon' />
                                 Experiences
                             </a>
-                        </li>
-                        <li className='nav__item'>
+                        </motion.li>
+                        <motion.li variants={itemVariant} className='nav__item'>
                             <a
                                 href='#projects'
                                 className={`nav__link ${
@@ -135,8 +161,8 @@ const Header = ({ toggleColorModeHandler: parentToggleDarkMode }) => {
                                 <i className='uil uil-flask nav__icon' />
                                 Projects
                             </a>
-                        </li>
-                        <li className='nav__item'>
+                        </motion.li>
+                        <motion.li variants={itemVariant} className='nav__item'>
                             <a
                                 href='#contact'
                                 className={`nav__link ${
@@ -146,8 +172,8 @@ const Header = ({ toggleColorModeHandler: parentToggleDarkMode }) => {
                                 <i className='uil uil-message nav__icon' />
                                 Contact
                             </a>
-                        </li>
-                    </ul>
+                        </motion.li>
+                    </motion.ul>
 
                     {/* <i
                         className='uil uil-times nav__close'
