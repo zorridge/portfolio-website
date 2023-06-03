@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
+
+import Reveal from './components/utils/Reveal';
 
 import Stars from './components/stars/Stars';
 import Header from './components/header/Header';
@@ -20,18 +22,36 @@ function App() {
         setIsDarkMode(isDarkModeToggled);
     };
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <>
             <Stars />
             <Header toggleColorModeHandler={toggleColorModeHandler} />
             <main className='main'>
-                <Home />
-                <About />
-                <Skills />
-                <Experiences />
-                <Projects />
-                <Contact />
-                <Music isDarkMode={isDarkMode} />
+                <Reveal>
+                    <Home />
+                </Reveal>
+                <Reveal>
+                    <About />
+                </Reveal>
+                <Reveal>
+                    <Skills />
+                </Reveal>
+                <Reveal>
+                    <Experiences />
+                </Reveal>
+                <Reveal>
+                    <Projects />
+                </Reveal>
+                <Reveal>
+                    <Contact />
+                </Reveal>
+                <Reveal>
+                    <Music isDarkMode={isDarkMode} />
+                </Reveal>
             </main>
             <Footer />
             <ScrollToTop />
