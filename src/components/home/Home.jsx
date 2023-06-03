@@ -13,9 +13,9 @@ const Home = () => {
                 <div className='home__content grid'>
                     <Social />
                     <motion.div
-                        initial={{ opacity: 0, y: 75 }}
+                        initial={{ opacity: 0, y: 100 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 1 }}
+                        transition={{ duration: 1, delay: 1 }}
                         className='home__img'></motion.div>
                     <Data />
                 </div>

@@ -78,7 +78,7 @@ const Header = ({ toggleColorModeHandler: parentToggleDarkMode }) => {
             opacity: 1,
             y: 0,
             transition: {
-                delayChildren: 0.3,
+                delayChildren: 1,
                 staggerChildren: 0.1
             }
         }
