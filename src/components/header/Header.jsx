@@ -73,7 +73,7 @@ const Header = ({ toggleColorModeHandler: parentToggleDarkMode }) => {
 
     // Animations
     const listVariant = {
-        hidden: { opacity: 0, y: -75 },
+        hidden: { opacity: 0, y: -25 },
         visible: {
             opacity: 1,
             y: 0,
@@ -85,7 +85,7 @@ const Header = ({ toggleColorModeHandler: parentToggleDarkMode }) => {
     };
 
     const itemVariant = {
-        hidden: { opacity: 0, y: -75 },
+        hidden: { opacity: 0, y: -25 },
         visible: {
             opacity: 1,
             y: 0
