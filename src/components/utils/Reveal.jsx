@@ -1,12 +1,20 @@
 import React from 'react';
-
 import { motion } from 'framer-motion';
 
+import useMediaQuery from '../hooks/useMediaQuery';
+
 const Reveal = ({ children }) => {
-    const variants = {
-        hidden: { opacity: 0, y: 75 },
-        visible: { opacity: 1, y: 0 }
-    };
+    const isWeb = useMediaQuery('(min-width: 769px)');
+
+    const variants = isWeb
+        ? {
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 }
+          }
+        : {
+              hidden: { opacity: 1, y: 0 },
+              visible: { opacity: 1, y: 0 }
+          };
 
     return (
         <motion.div
