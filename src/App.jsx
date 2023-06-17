@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 
-import Reveal from './components/utils/Reveal';
+import Reveal from './utils/Reveal';
 
 // import Stars from './components/stars/Stars';
 import Header from './components/header/Header';
