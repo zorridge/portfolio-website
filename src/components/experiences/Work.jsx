@@ -3,8 +3,40 @@ import React from 'react';
 const Work = () => {
     return (
         <div className='qualification__content'>
+            {/* NodeFlair */}
+            <div className='qualification__data'>
+                <div>
+                    <div className='qualification__headline'>
+                        <img
+                            src={require('../../assets/nodeflair-logo.jpeg')}
+                            alt='nodeflair-logo'
+                        />
+                        <div>
+                            <h3 className='qualification__title'>NodeFlair</h3>
+                            <span className='qualification__subtitle'>
+                                Software Engineer Intern
+                            </span>
+                        </div>
+                    </div>
+
+                    <div className='qualification__calendar'>
+                        <i className='uil uil-calendar-alt' /> Dec 2023 - May
+                        2024
+                    </div>
+                </div>
+                <div>
+                    <span className='qualification__rounder'></span>
+                    <span className='qualification__line'></span>
+                </div>
+            </div>
+
             {/* Proxtera */}
             <div className='qualification__data'>
+                <div></div>
+                <div>
+                    <span className='qualification__rounder'></span>
+                    <span className='qualification__line'></span>
+                </div>
                 <div>
                     <div className='qualification__headline'>
                         <img
@@ -20,23 +52,14 @@ const Work = () => {
                     </div>
 
                     <div className='qualification__calendar'>
-                        <i className='uil uil-calendar-alt' /> May 2023 - Aug
+                        <i className='uil uil-calendar-alt' /> May 2023 - Jul
                         2023
                     </div>
-                </div>
-                <div>
-                    <span className='qualification__rounder'></span>
-                    <span className='qualification__line'></span>
                 </div>
             </div>
 
             {/* Refers.fyi */}
             <div className='qualification__data'>
-                <div></div>
-                <div>
-                    <span className='qualification__rounder'></span>
-                    <span className='qualification__line'></span>
-                </div>
                 <div>
                     <div className='qualification__headline'>
                         <img
@@ -56,10 +79,19 @@ const Work = () => {
                         2023
                     </div>
                 </div>
+                <div>
+                    <span className='qualification__rounder'></span>
+                    <span className='qualification__line'></span>
+                </div>
             </div>
 
             {/* Shopee */}
             <div className='qualification__data'>
+                <div></div>
+                <div>
+                    <span className='qualification__rounder'></span>
+                    <span className='qualification__line'></span>
+                </div>
                 <div>
                     <div className='qualification__headline'>
                         <img
@@ -78,10 +110,6 @@ const Work = () => {
                         <i className='uil uil-calendar-alt' /> Feb 2022 - May
                         2022
                     </div>
-                </div>
-                <div>
-                    <span className='qualification__rounder'></span>
-                    <span className='qualification__line'></span>
                 </div>
             </div>
         </div>
