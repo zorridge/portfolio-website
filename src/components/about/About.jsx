@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { ref, getDownloadURL } from 'firebase/storage';
+
 import './about.css';
 
+import { storage } from '../../utils/firebase';
 import Info from './Info';
-import Resume from '../../assets/resume_ZhouZiheng.pdf';
 
 const About = () => {
+    const storageRef = ref(storage, 'documents/resume_ZhouZiheng.pdf');
+    const [resumeUrl, setResumeUrl] = useState('');
+
+    useEffect(() => {
+        getDownloadURL(storageRef)
+            .then(url => setResumeUrl(url))
+            .catch(e => {
+                console.log(
+                    `Error fetching resume from Firebase:\n${e.message}`
+                );
+            });
+    }, [storageRef]);
+
     return (
         <section className='about section' id='about'>
             <h2 className='section__title'>About Me</h2>
@@ -36,7 +51,7 @@ const About = () => {
                             </div>
 
                             <a
-                                href={Resume}
+                                href={resumeUrl}
                                 className='button button--flex'
                                 target='_blank'
                                 rel='noreferrer'>
